@@ -1,100 +1,79 @@
-# 03 JavaScript: Password Generator
+# JavaScript: Password Generator
 
-## Your Task
+## Description
 
-This week's Challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+This website has been developed using a Javascript, a HTML and a CSS starting code provided by the tutors as a base to create a tool that by a click in a bottom will create a customized password attending the end-users requirements.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+As a challenge, it has really challenged me, because besides having to figure out what needs to be done to create a random password to attend the requirements, it also required some further research to have a better understand about methods and functions in Javascript.
 
-## User Story
+Attention to details was the most challenging part, once one of the requirements was ensure that all the data required by the end-user have been inputed into the final result.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+Therefore, understanding what was purposed is crucial as a starting point to make sure that any requirement will not be missed.
 
-## Acceptance Criteria
+## Usage
+The webpage has been developed using VS Code, where the structure was created in HTML, CSS and the interaction with the end-user was developed using Javascript. 
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+The webpage is an interactive way to help the end-users to create random passwords according with their own requirements, where they can choose what kind of elements will be add in the password and how long it will be respecting a lenght from 8 to 128 characteres.
 
-## Mock-Up
+The image below shows the main section of the website, where a container contain a text area that will display the final result and a buttom which will activate a prompt to be filled with the end-users requirements.
 
-The following image shows the web application's appearance and functionality:
+<img src="./Assets/images/website-body.png" alt="main content of the website" width="60%" height="60%" />
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+By clicking on the buttom 'Generate Password' an event "click" will be activate, then a prompt will be opened where the end-users have the opportunity to start inputing data about how they want to customize their password.
 
-## Grading Requirements
+Below represents the first display faced by the end-user to input the lenght of the password, which must attend the requirements described.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+<img src="./Assets/images/prompt-entry-lenght.png" alt="prompt with a box to receive the lenght of the password" width="60%" height="60%" />
 
-This Challenge is graded based on the following criteria: 
+The following images represents possible erros that may happen if the end-user rather using numbers to fill the box he uses letters, special characteres or even if any value has been inputed.
 
-### Technical Acceptance Criteria: 40%
+<img src="./Assets/images/error-lenght-null.png" alt="number lower or higher or null than requested" width="40%" height="40%" />
+<img src="./Assets/images/error-typing.png" alt="if not a number" width="40%" height="40%" />
 
-* Satisfies all of the preceding acceptance criteria.
+If the data inputed attends the requirements, then a group sequencial boxes will be displayed to give the opportunity to the end-user chooses what kind of data he wants to have in his password (lowercases, uppercases, numbers and special characteres).
 
-### Deployment: 32%
+<img src="./Assets/images/lowercases-confirm.png" alt="confirm if want to have lowercases" width="40%" height="40%" />
+<img src="./Assets/images/uppercases-confirm.png" alt="confirm if want to have uppercases" width="40%" height="40%" />
 
-* Application deployed at live URL.
+<img src="./Assets/images/numbers-confirm.png" alt="confirm if want to have numbers" width="40%" height="40%" />
+<img src="./Assets/images/special-confirm.png" alt="confirm if want to have special characteres" width="40%" height="40%" />
 
-* Application loads with no errors.
+As soon as the end-user finishes confirming what he wants or not in his password, the function will be displayed to the screen with a random password that contains everything as required.
 
-* Application GitHub URL submitted.
+<img src="./Assets/images/password-displayed.png" alt="example of a password with 8 characteres" width="60%" height="60%" />
 
-* GitHub repository that contains application code.
 
-### Application Quality: 15%
+## Development & Deployment
 
-* Application user experience is intuitive and easy to navigate.
+The code to create the website was developed using Javascript, where it was possible create interaction by using events as "click" on the buttom and a group of comparisons of the data inserted to attend the acceptance criteria. 
 
-* Application user interface style is clean and polished.
+The screenshot below shows part of the code where a function is created and a group comparisons happen using a functionality "if" to manage what kind of data will be storaged.
+In addition, it is notable a suffle of the elements required to be sort out and inputed to a new element.
 
-* Application resembles the mock-up functionality provided in the Challenge instructions.
+<img src="./Assets/images/comparison-if.png" alt="part od CSS code with if's" width="50%" height="50%" />
 
-### Repository Quality: 13%
+In the end the of the functions is created a repetition scheme as a looping (while) that will be displayed and ensure that the number of elements of the password lenght will attend the requirements of the end-user, then a value will be set to the passsword that will use the value when display the main function "writePassword()".
 
-* Repository has a unique name.
+<img src="./Assets/images/while-repetition.png" alt="looping using while" width="70%" height="70%" />
 
-* Repository follows best practices for file structure and naming conventions.
+On the top of the code we have the main function of the code that will receive all the values processed as shown above and then display the final result to the end-user.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+<img src="./Assets/images/writepassword-function.png" alt="main function of the code" width="70%" height="70%" />
 
-* Repository contains multiple descriptive commit messages.
+### Deployed Website
 
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
+To have a better understanding of what was happening behind the scenes to create the final result, I have inserted some codes on Console log to follow how it was working.
 
-## Review
+<img src="./Assets/images/console-log.png" alt="main function of the code" width="45%" height="45%" />
 
-You are required to submit the following for review:
+https://robinsonfdossantos.github.io/Generate-Password/
 
-* The URL of the deployed application.
+For more information, use the browser's DevTools by typing Ctrl + Shift + I.
 
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
+## Credits
 
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Members of the Bootcamp team, and in special to Meeks Gombe, Dominique who helped me to understand and overcome all my doubts through a 1:1 tutor session.
+
+## License
+
+Licensed under the MIT license.

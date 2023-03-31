@@ -7,8 +7,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
@@ -25,8 +25,14 @@ function generatePassword() {
   passwordLength = prompt("How long must be your password? PS: Not less than 8 and more than 128");
   console.log(passwordLength);
 
+
+  if (isNaN(passwordLength)){
+    confirm("You must use only numbers");
+    return;
+  }
+
   if (passwordLength === null || passwordLength < 8 || passwordLength > 128) {
-    confirm("Try again! The password must have at least 8 characteres and less than 128 characteres");
+    confirm("Try again! You must choose a number. The password must have at least 8 and less than 128 characteres.");
     return;
   }
 
